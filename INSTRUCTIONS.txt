@@ -1,0 +1,53 @@
+// @BEGIN_VERSION_ONLY GATHER_WORDS_SPACE
+Hello Gather Words
+------------------------
+Write a function that extracts words from a string, splitting words on space. 
+// @END_VERSION_ONLY GATHER_WORDS_SPACE
+// @BEGIN_VERSION_ONLY GATHER_WORDS_WHITESPACE
+Gather Words, Whitespace
+------------------------
+Write a function that extracts words from a string, splitting words on
+whitespace. What is the regexp for whitespace?
+// @END_VERSION_ONLY GATHER_WORDS_WHITESPACE
+// @BEGIN_VERSION_ONLY GATHER_WORDS_PUNCTUATION
+Gather Words, Remove Punctuation
+--------------------------------
+Remove not only whitespace, but also any punctuation. Run main and watch the
+output.
+// @END_VERSION_ONLY GATHER_WORDS_PUNCTUATION
+// @BEGIN_VERSION_ONLY GATHER_WORDS_LOWERCASE
+Gather Words, Ignore Case
+-------------------------
+Ignore the case of the words by converting them to lowercase. Run main.
+// @END_VERSION_ONLY GATHER_WORDS_LOWERCASE
+// @BEGIN_VERSION_ONLY COUNT_WORDS
+Count Words
+-----------
+Count the words into a map from words to count. Perhaps you'll get some use of
+that fold implementation now?
+// @END_VERSION_ONLY COUNT_WORDS
+// @BEGIN_VERSION_ONLY SORT_COUNTED_WORDS
+Sort Counted Words
+------------------
+Sort the map by count and return a list of word/count pairs. What's the simplest
+implementation of a pair? I don't know, but we chose Map, so that's what you'll
+use. It might look funny with a Collection of Map from String to Integer, but
+remember that the Map is only representing a key-value pair.
+// @END_VERSION_ONLY SORT_COUNTED_WORDS
+// @BEGIN_VERSION_ONLY REPEAT_STR
+Repeat String
+-------------
+Repeat a string a given number of times. Like 'repeatStr "#" 3' becomes "###".
+// @END_VERSION_ONLY REPEAT_STR
+// @BEGIN_VERSION_ONLY HISTOGRAM_ENTRY
+Histogram Entry
+---------------
+Produce a single entry in the histogram. Calling histogramEntry with a word-count
+pair of ["betty" 6] and a width of 7 should return the word "betty" left-justified
+within a field of 7 characters, a blank, and then six hashes: "betty   ######".
+// @END_VERSION_ONLY HISTOGRAM_ENTRY
+// @BEGIN_VERSION_ONLY HISTOGRAM
+Histogram
+---------
+Produce a complete histogram. It's just a bunch of histogram entries.
+// @END_VERSION_ONLY HISTOGRAM
