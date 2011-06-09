@@ -26,6 +26,7 @@ class WordGraphTest extends Spec with MustMatchers {
     }
   }
 // @END_VERSION REPEAT_STR
+
 // @BEGIN_VERSION GATHER_WORDS_SPACE
   describe("gatherWords") {
     it("should split words on space") {

@@ -24,6 +24,7 @@ object WordGraph {
 	}
 	def repeatString(string: String, count: Int) = repeatStringRecursive(string, count)
 // @END_VERSION REPEAT_STR
+	
 // @BEGIN_VERSION GATHER_WORDS_SPACE
 	def gatherWords(string : String) = {
 // @BEGIN_VERSION_ONLY GATHER_WORDS_SPACE
@@ -35,9 +36,9 @@ object WordGraph {
 // @BEGIN_VERSION_ONLY GATHER_WORDS_PUNCTUATION
 	  string.split("\\W+").filter(_.length > 0)
 // @END_VERSION_ONLY GATHER_WORDS_PUNCTUATION
-// @BEGIN_VERSION_ONLY GATHER_WORDS_LOWERCASE
+// @BEGIN_VERSION GATHER_WORDS_LOWERCASE
 	  string.split("\\W+").filter(_.length > 0).map(_.toLowerCase)
-// @END_VERSION_ONLY GATHER_WORDS_LOWERCASE
+// @END_VERSION GATHER_WORDS_LOWERCASE
 	}
 // @END_VERSION GATHER_WORDS_SPACE
 // @BEGIN_VERSION COUNT_WORDS

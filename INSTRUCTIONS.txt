@@ -1,6 +1,12 @@
 // @BEGIN_VERSION_ONLY REPEAT_STR
 Repeat String
 -------------
+object WordGraph {
+	def repeatString(string: String, count: Int) : String = {
+	   ...
+	}
+}
+
 Repeat a string a given number of times. Like 'repeatString "#" 3' becomes "###".
 
 Try at least two different implementation versions

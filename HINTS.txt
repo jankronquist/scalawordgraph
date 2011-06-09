@@ -1,12 +1,9 @@
-This file contains hints that don't give you the solution, but point you in the
-right direction.
-
-Reload this file after moving to the next step, for further hints.
-
 // @BEGIN_VERSION_ONLY REPEAT_STR
 Repeat String
 -------------
-Notice that you can use inner functions in Scala.
+Problems with @tailrec? Notice that you can use inner functions in Scala.
+
+Put @tailrec on the inner function. What signature do you need?
 // @END_VERSION_ONLY REPEAT_STR
 // @BEGIN_VERSION_ONLY GATHER_WORDS_SPACE
 Hello Gather Words
