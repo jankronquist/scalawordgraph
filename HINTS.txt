@@ -3,6 +3,11 @@ right direction.
 
 Reload this file after moving to the next step, for further hints.
 
+// @BEGIN_VERSION_ONLY REPEAT_STR
+Repeat String
+-------------
+Notice that you can use inner functions in Scala.
+// @END_VERSION_ONLY REPEAT_STR
 // @BEGIN_VERSION_ONLY GATHER_WORDS_SPACE
 Hello Gather Words
 ------------------------
@@ -18,46 +23,34 @@ Remember to filter!
 // @BEGIN_VERSION_ONLY GATHER_WORDS_PUNCTUATION
 Gather Words, Remove Punctuation
 --------------------------------
-No hints yet.
+string.split("\\W+")
 // @END_VERSION_ONLY GATHER_WORDS_PUNCTUATION
 // @BEGIN_VERSION_ONLY GATHER_WORDS_LOWERCASE
 Gather Words, Ignore Case
 -------------------------
-No hints yet.
+Use map and toLowerCase
 // @END_VERSION_ONLY GATHER_WORDS_LOWERCASE
 // @BEGIN_VERSION_ONLY COUNT_WORDS
 Count Words
 -----------
-This is the pseudo-code for counting stuff in a collection:
+The result we want has the type Map[String, Int]. This means that the
+starting value of the foldLeft must be an empty Map. 
 
-    (fold (function [counts x]
-      	        (assoc counts x (inc (get counts x 0))))
-          {}
-          coll))
+The function we need has the following signature:
 
-'counts' is a Map that accumulates the counts.
-'x' will be each element in 'coll'.
-{} is an empty Map used as the initial value.
+wordCountAdder(wordsWithCount: Map[String, Int], word: String): Map[String, Int] 
 
-Get the value of x from the Map counts, or zero if no x in counts:
-	(get counts x 0)
+How to use a Map? 
+http://stackoverflow.com/questions/949419/scala-collection-map-cannot-be-added-to
 
-Increase it by one:
-	(inc (get counts x 0))
-
-Associate to the key 'x', in the Map 'counts', the above number as the value:
-    (assoc counts x (inc (get counts x 0)))
 // @END_VERSION_ONLY COUNT_WORDS
 // @BEGIN_VERSION_ONLY SORT_COUNTED_WORDS
 Sort Counted Words
 ------------------
-Transform the Map to a collection of Maps, then sort.
+List has a sort method. The method signature you are looking for is:
+
+byCount(word1: (String, Int), word2: (String, Int)) : Boolean
 // @END_VERSION_ONLY SORT_COUNTED_WORDS
-// @BEGIN_VERSION_ONLY REPEAT_STR
-Repeat String
--------------
-StringBuilder
-// @END_VERSION_ONLY REPEAT_STR
 // @BEGIN_VERSION_ONLY HISTOGRAM_ENTRY
 Histogram Entry
 ---------------
@@ -66,5 +59,5 @@ sprintf("%-7.7s %d", word, count)
 // @BEGIN_VERSION_ONLY HISTOGRAM
 Histogram
 ---------
-No hints yet.
+map, foldLeft and mkString are useful.
 // @END_VERSION_ONLY HISTOGRAM

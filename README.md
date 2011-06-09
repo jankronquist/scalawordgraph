@@ -4,6 +4,13 @@ a histogram of the results.
 Pre-requisites
 --------------
 
+Useful Links
+--------------
+I have collected some useful links here:
+
+http://delicious.com/kronquist/scala+reference
+http://delicious.com/kronquist/learning+scala
+
 Introduction
 ------------
 The purpose is to build a little utility that shows a histogram graph of the number
