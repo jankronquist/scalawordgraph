@@ -1,11 +1,14 @@
 package com.jayway.wordgraph
 
+import org.scalatest.junit.JUnitRunner
+import org.junit.runner.RunWith
 import org.scalatest.FlatSpec
 import org.scalatest.matchers.ShouldMatchers
 import org.scalatest.matchers.MustMatchers
 
 import org.scalatest.Spec
 
+@RunWith(classOf[JUnitRunner])
 class WordGraphTest extends Spec with MustMatchers {
 
   describe("WordGraph") {
