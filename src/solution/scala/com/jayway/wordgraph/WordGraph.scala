@@ -41,6 +41,7 @@ object WordGraph {
 // @END_VERSION GATHER_WORDS_LOWERCASE
 	}
 // @END_VERSION GATHER_WORDS_SPACE
+
 // @BEGIN_VERSION COUNT_WORDS
 	def countWords(words : Array[String]) = {
 	  def wordCountAdder(wordsWithCount: Map[String, Int], word: String) = {
@@ -50,6 +51,7 @@ object WordGraph {
 	  words.foldLeft(Map[String,Int]())(wordCountAdder)
 	}
 // @END_VERSION COUNT_WORDS
+
 // @BEGIN_VERSION SORT_COUNTED_WORDS
 	def sortCountedWords(wordsWithCount: Map[String, Int]) = {
 	  sortCountedWordsShort(wordsWithCount)
@@ -64,12 +66,14 @@ object WordGraph {
 	  wordsWithCount.toList.sort(byCount)
 	}
 // @END_VERSION SORT_COUNTED_WORDS
+
 // @BEGIN_VERSION HISTOGRAM_ENTRY
 	def histogramEntry(wordWithCount: (String, Int), width: Int) = {
 	  val spaceCount = width - wordWithCount._1.length + 1
 	  wordWithCount._1 + repeatString(" ", spaceCount) + repeatString("#", wordWithCount._2)
 	}
 // @END_VERSION HISTOGRAM_ENTRY
+
 // @BEGIN_VERSION HISTOGRAM
 	def histogram(wordsWithCount: List[(String, Int)], separator: String = System.getProperty("line.separator")) = {
 	  val maxWidth = wordsWithCount.foldLeft(0)((max, word) => Math.max(max, word._1.length))

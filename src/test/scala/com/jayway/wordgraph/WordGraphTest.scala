@@ -12,11 +12,6 @@ import org.scalatest.Spec
 class WordGraphTest extends Spec with MustMatchers {
 
 // @BEGIN_VERSION REPEAT_STR
-    // (describe repeat-str
-    //   (it "returns the empty string if count is zero"
-    //     (= "" (repeat-str "*" 0)))
-    //   (it "repeats the input string n times"
-    //     (= "xxxxx" (repeat-str "x" 5))))
   describe("repeatString") {
     it("returns the empty string if count is zero") {
       WordGraph.repeatString("*", 0) must equal ("")
@@ -65,9 +60,6 @@ class WordGraphTest extends Spec with MustMatchers {
 // @END_VERSION COUNT_WORDS
   
 // @BEGIN_VERSION SORT_COUNTED_WORDS
-    // (describe sort-counted-words
-    //   (it "sorts and returns a list of word/count pairs"
-    //     (= [["a" 1] ["c" 2] ["b" 3]] (sort-counted-words {"b" 3 "c" 2 "a" 1}))))
   describe("sortCountedWords") {
     it("sorts and returns a list of word/count pairs") {
 	  val res : List[(String,Int)] = WordGraph.sortCountedWords(Map("two" -> 2, "three" -> 3, "one" -> 1))
@@ -83,15 +75,12 @@ class WordGraphTest extends Spec with MustMatchers {
     }
   }
 // @END_VERSION HISTOGRAM_ENTRY
+
 // @BEGIN_VERSION HISTOGRAM
-// (describe histogram
-//   (it "can generate a histogram from word counts"
-//     (= "mary ##\nwhy  ###\n" (histogram [["mary" 2] ["why" 3]]))))
   describe("histogram") {
     it("can generate a histogram from word counts") {
       WordGraph.histogram(List(("mary", 2), ("why", 3)), "\n") must equal ("mary ##\nwhy  ###\n")
     }
   }
 // @END_VERSION HISTOGRAM
-
 }
