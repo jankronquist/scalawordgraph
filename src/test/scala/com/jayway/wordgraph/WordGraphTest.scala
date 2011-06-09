@@ -53,8 +53,7 @@ class WordGraphTest extends Spec with MustMatchers {
   describe("countWords") {
     it("should count words into a map") {
 	  val res : Map[String,Int] = WordGraph.countWords(Array("why", "mary", "why", "mary", "why"))
-	  res must contain (("mary", 2))
-	  res must contain (("why", 3))
+	  res must equal (Map(("mary" -> 2), ("why" -> 3)))
     }
   }
 // @END_VERSION COUNT_WORDS
