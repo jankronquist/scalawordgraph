@@ -8,8 +8,8 @@ Useful Links
 --------------
 I have collected some useful links here:
 
-http://delicious.com/kronquist/scala+reference
-http://delicious.com/kronquist/learning+scala
+* http://delicious.com/kronquist/scala+reference
+* http://delicious.com/kronquist/learning+scala
 
 Introduction
 ------------
@@ -30,7 +30,7 @@ Quick Start
 -----------
 Check out this lab from github.com:
 
-	git clone git@github.com:kronquist/scalawordgraph.git
+	git clone git://github.com/jankronquist/scalawordgraph.git
 
 The lab is constructed using [maven-lab-plugin](https://github.com/jayway/maven-lab-plugin).
 Initialize the lab to step 0 by running:
